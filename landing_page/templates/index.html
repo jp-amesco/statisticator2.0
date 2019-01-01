@@ -1,0 +1,58 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-4">
+      <div class="card card-initial align-middle">
+        <h3 class="card-title">Estatistica Descritiva</h3>
+        <img src="{% static 'public/images/estatistica-descritiva.jpg' %}">
+        <div class="row">
+          <div class="col-12">
+            <p class="text-center desc">Aqui você encontrara todos os resultados como, moda, media, mediana, tabela descritiva, probabilidade, correlação e regressão, etc.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+           <a class="btn btn-primary" href="#">Comece já</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card card-initial align-middle">
+        <h3 class="card-title">Probabilidade</h3>
+        <img src="{% static 'public/images/estatistica-descritiva.jpg' %}">
+        <div class="row">
+          <div class="col-12">
+            <p class="text-center desc">Aqui você encontrara apenas resultados de probabilidade</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+           <a class="btn btn-primary" href="#">Comece já</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card card-initial align-middle">
+        <h3 class="card-title">Correlação e Regressão</h3>
+        <img src="{% static 'public/images/estatistica-descritiva.jpg' %}">
+        <div class="row">
+          <div class="col-12">
+            <p class="text-center desc">Aqui você encontrara resultados de correlação e regressão como projeção futura, e gráficos</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+           <a class="btn btn-primary" href="#">Comece já</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

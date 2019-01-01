@@ -11,15 +11,15 @@ const babelify = require('babelify');
 const uglify = require('gulp-uglify-es').default;
 const stringify = require('stringify');
 
-const fileJs = './js/app.js';
-const fileCss = './css/app.less';
+const fileJs = './public/js/app.js';
+const fileCss = './public/css/app.less';
 
 function css() {
 	return gulp
 		.src(fileCss)
 		.pipe(less())
 		.pipe(minifyCSS())
-		.pipe(gulp.dest('./css'))
+		.pipe(gulp.dest('./resources/css'))
 }
 
 function js() {
@@ -36,13 +36,13 @@ function js() {
 		.pipe(concat('app.min.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./js'))
+		.pipe(gulp.dest('./resources/js'))
 }
 
 
 function watch() {
 	gulp.watch('../*/public/js/*.js', js);
-	gulp.watch('../*/public/less/*.less', css);
+	gulp.watch('../*/public/css/*.less', css);
 }
 
 gulp.task('watch', gulp.series(js, css, watch));
